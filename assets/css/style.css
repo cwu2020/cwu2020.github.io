@@ -1281,12 +1281,16 @@ footer a:hover {
    	color: #90CADD;
 }
 
-.contact-widget ul.social-icons li a.tumblr:hover i {
+.contact-widget ul.social-icons li a.wordpress:hover i {
    	color: #4D7EA3;
 }
 
 .contact-widget ul.social-icons li a.flickr:hover i {
    	color: #E474AF;
+}
+
+.contact-widget ul.social-icons li a.goodreads:hover i {
+    color: #8b4513;
 }
 
 .contact-widget ul.social-icons li a.instgram:hover i {
@@ -1339,7 +1343,7 @@ footer a:hover {
 }
 
 .copyright-section {
-    padding: 30px 0;
+    padding-bottom: 30px;
     font-size: 15px;
         border-top: 1px solid #131313;
 }
@@ -2052,12 +2056,39 @@ footer a:hover {
 
 -------------------------------- */
 
-.site-hero_2 {
+.site-hero_2 .video-foreground,
+.video-background iframe {
+    
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+    position: relative
+}
+.site-hero_3 {
     background: url("../img/site-hero2.jpg") no-repeat;
     background-size: cover;
     height: 600px;
     width: 100%;
     position: relative
+}
+
+* { box-sizing: border-box; }
+/*
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}*/
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
 }
 
 .site-hero_2 .page-title {
@@ -2121,6 +2152,7 @@ ul.project_list li{
     position: relative;
     padding-left: 20px;
     margin-bottom: 10px;
+    color: #ccc;
 }
 
 ul.project_list li:before{
@@ -2149,6 +2181,7 @@ ul.social-icons li i{
     border-bottom: 1px solid rgba(204, 204, 204, 0.55);
     padding: 10px;
     text-transform: uppercase;
+    color: #ccc;
 }
 
 .project_slider .flex-direction-nav a{
